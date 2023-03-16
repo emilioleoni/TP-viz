@@ -6,6 +6,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     marginLeft: "180",
     width:"1000",
     height:200,
+    nice:true,
+    grid:true,
+    line:true,
     marks: [
       Plot.barX(data, {
         x: 'eva_mision_hs', fill: 'ocupacion',

@@ -19,7 +19,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     width:800,
     marginLeft: 190,
     marginBottom: 40,
-
+    nice:true,
+    grid:true,
+    line:true,
   })
   d3.select('#chart').append(() => chart)
 })
