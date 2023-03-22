@@ -19,7 +19,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     ],
     y: {
       label: "Ocupación", 
-    domain: d3.sort(data, (a, b) => d3.descending(a.eva_mision_hs, b.eva_mision_hs)).map(d => d.ocupacion),
+      domain: d3.sort(data, (a, b) => d3.descending(a.eva_mision_hs, b.eva_mision_hs)).map(d => d.ocupacion),
     },
     x: { label:"Horas de mision eva",
       grid: true,
