@@ -1,3 +1,4 @@
+
 #chart {
   display: inline-block;
   border: 1px solid black;
@@ -12,9 +13,17 @@
 }
 
 h1{
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: bolder;
-    border-bottom: 2px solid black;
-  }
-  
+text-align:center;
+font-family:'Arial';
+font-size:30px;
+color:#333;
+border-bottom:solid #000000 2px;
+padding-top:20px;/* agregue espaciado superior debajo del título */
+
+}
+
+
+.axis-label {
+  font-size: 18px; /* Change the font size to 18 pixels */
+}
+.xlabel,.ylabel{font-size:18px;}/* aumenta tamaño titulos ejes*/

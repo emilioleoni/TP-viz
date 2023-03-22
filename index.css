@@ -79,28 +79,3 @@ a:hover{
     font-size: 2rem;
   }
 }
-
-/* Ajustes para pantallas muy pequeñas (como móviles) */
-@media (max-width: 480px) {
-  .container{
-    margin-top: 3vh;
-  }
-
-  .form-box{
-    width: 90%;
-    height: auto;
-    margin: 2vh;
-    padding: 2vw;
-  }
-
-  a{
-    font-size: 3.5vw;
-    margin: 1.5vh 0;
-    padding: 1.5vh 2vw;
-  }
-
-  h1{
-    font-size: 1.8rem;
-  }
-}
-``

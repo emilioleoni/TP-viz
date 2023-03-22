@@ -8,21 +8,23 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
           x: 'nacionalidad',
           symbol: "square",
           r:3.5,
-          fill: 'genero',
+          fill: 'nacionalidad',
         }),
       ],
       grid: true,
       line: true,
       nice: true,
       color: {
-        legend: true,
+        legend: false,
       },
       x:{label:"Nacionalidad", labelOffset:38},
       y:{label:"Año de la mision", labelOffset:100},
-    height: 300,
+    height: 450,
     width:1200,
     marginLeft: 100,
-    marginBottom:50,
+    marginRight: 50,
+    marginTop: 30,
+    marginBottom: 70,
     })
     // Agregamos chart al div#chart de index.html
     d3.select('#chart').append(() => chart)
