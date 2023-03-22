@@ -7,8 +7,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         fill: 'nacionalidad',
       }),
     ],
-    x:{label:"Año de la mision", labelOffset:30},
-    y:{label:"Duracion de la mision", labelOffset:120},
+    x:{label:"Año de la misión", labelOffset:30},
+    y:{label:"Duración de la misión", labelOffset:120},
     grid: true,
     line: true,
     nice: true,
@@ -23,4 +23,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
   /* Agrega el chart al DOM */
   d3.select('#chart').append(() => chart)
+
+  /* Agrega el estilo para el contenedor de los puntos del gráfico */
+  d3.select('#chart svg')
+    .style('overflow', 'scroll')
 })
