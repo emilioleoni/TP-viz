@@ -26,6 +26,7 @@ section{
     justify-content: center;
     align-items: center;
     margin: 30px;
+    padding: 20px;
 }
 a{
     font-size: 0.8em;
