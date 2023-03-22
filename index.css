@@ -1,35 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'poppins',sans-serif;
 }
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-    background: url('astronautaa.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
+
+h1{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 5vh; /* Se ha ajustado la distancia desde arriba */
+  color: #132154;
+  text-shadow: 2px 2px rgba(0,0,0,0.5);
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh; /* Se ha ajustado la distancia desde arriba */
+}
+
 .form-box{
-    position: relative;
-    width: 450px;
-    height: 220px;
-    background: transparent;
-    border: 2px solid rgba(255,255,255,0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(15px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    padding: 20px;
+  width: 80%;
+  height: 60vh; /* Se ha ajustado la altura */
+  background: rgba(0, 121, 191, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5vh; /* Se ha ajustado el margen */
+  padding: 5vw; /* Se ha ajustado el padding */
+  flex-direction: column;
 }
+
 a{
-    font-size: 0.8em;
-    color: #fff;
-    text-align: center;
+  font-size: 1vw; /* Se ha ajustado el tamaño de fuente */
+  color: #ffffff;
+  text-align: center;
+  margin: 3vh 0; /* Se ha ajustado el margen vertical */
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 10px;
+  padding: 2vh 5vw; /* Se ha ajustado el padding */
+  transition: all 0.3s ease;
+  display: block;
 }
+
+a:hover{
+  background-color: #ffffff;
+  color: #0079bf;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container{
+    margin-top: 5vh;
+  }
+
+  .form-box{
+    width: 90%;
+    height: auto;
+    margin: 3vh;
+    padding: 3vw;
+  }
+
+  a{
+    font-size: 2.5vw;
+    margin: 2vh 0;
+    padding: 2vh 3vw;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (como móviles) */
+@media (max-width: 480px) {
+  .container{
+    margin-top: 3vh;
+  }
+
+  .form-box{
+    width: 90%;
+    height: auto;
+    margin: 2vh;
+    padding: 2vw;
+  }
+
+  a{
+    font-size: 3.5vw;
+    margin: 1.5vh 0;
+    padding: 1.5vh 2vw;
+  }
+
+  h1{
+    font-size: 1.8rem;
+  }
+}
+``

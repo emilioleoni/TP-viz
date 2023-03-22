@@ -5,6 +5,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         y: 'mision_hs',
         x: 'anio_mision',
         fill: 'nacionalidad',
+        //title:;  AGREGAR TITLE, ME DESCRIBE CADA PUNTO
       }),
     ],
     x:{label:"Año de la mision", labelOffset:30},
