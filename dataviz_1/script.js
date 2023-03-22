@@ -19,7 +19,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       },
       x:{label:"Nacionalidad", labelOffset:38},
       y:{label:"Año de la mision", labelOffset:100},
-    height: 300,
+    height: 450,
     width:1200,
     marginLeft: 100,
     marginRight: 50,
