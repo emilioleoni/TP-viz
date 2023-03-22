@@ -1,5 +1,6 @@
 
 #chart {
+  display: inline-block;
   border: 1px solid black;
   padding: 10px; /* Agrega espacio entre el borde y el contenido */
   background-color: #F5F5F5; /* Añade un color de fondo gris claro */

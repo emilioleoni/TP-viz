@@ -1,11 +1,17 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
-  const nth = 3; // Change this to the desired interval
-  const filteredData = data.filter((_, i) => i % nth === 0);
+  // Sumo el total de cada mision a el astronauta correspondiente
+  const groupedData = d3.rollup(data, group => d3.sum(group, d => d.mision_hs), d => d.nombre);
 
-  // Define a color scale
+  // Lo convierto en una lista
+  const filteredData = Array.from(groupedData, ([nombre, mision_hs]) => ({ nombre, mision_hs }));
+
+  // Eligo los 25 con mas tiempo de mision total
+  const sortedData = filteredData.sort((a, b) => b.mision_hs - a.mision_hs).slice(0, 25);
+
+  // Elijo el color y como lo sorteo
   const colorScale = d3.scaleSequential()
-    .domain(d3.extent(filteredData, d => d.mision_hs))
-    .interpolator(d3.interpolateReds);
+    .domain(d3.extent(sortedData, d => d.mision_hs))
+    .interpolator(d3.interpolateBlues);
 
   let chart = Plot.plot({
     y: {
@@ -14,7 +20,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       tickFormat: d => d.toLocaleString("en", {month: "narrow"}),
     },
     marks: [
-      Plot.barX(filteredData, {
+      Plot.barX(sortedData, {
         y: "nombre",
         x: "mision_hs",
         sort:{y:"x"},
@@ -22,10 +28,13 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       }),
       Plot.ruleX([0])
     ],
-    marginBottom: 40,
-    marginLeft: "150",
+    x:{label: "Tiempo en mision"},
+    marginLeft: 200,
+    marginRight: 50,
+    marginTop: 50,
+    marginBottom: 100,
     width:"1100",
-    height:600,
+    height:500,
     nice:true,
     grid:true,
     line:true,
@@ -33,3 +42,4 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
   d3.select('#chart').append(() => chart)
 });
+
