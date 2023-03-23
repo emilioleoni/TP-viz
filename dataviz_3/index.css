@@ -1,28 +1,33 @@
-
 #chart {
   border: 1px solid black;
-  padding: 10px; /* Agrega espacio entre el borde y el contenido */
-  background-color: #F5F5F5; /* Añade un color de fondo gris claro */
+  padding: 10px;
+  background-color: #F5F5F5;
+  margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
 }
 
-/* Estilo para las barras de grafico*/
 .mark rect {
- fill: #4682B4; /* Cambia el color relleno paara tener mas contraste con background-colors */
- stroke:#fff; /*Agrega una linea blaca alrededor del elemento*/
+  fill: #4682B4;
+  stroke: #fff;
 }
 
-h1{
-text-align:center;
-font-family:'Arial';
-font-size:30px;
-color:#333;
-border-bottom:solid #000000 2px;
-padding-top:20px;/* agregue espaciado superior debajo del título */
-
+h1 {
+  text-align: center;
+  font-family: 'Arial';
+  font-size: 30px;
+  color: #333;
+  border-bottom: solid #000000 2px;
+  padding-top: 20px;
 }
 
-
-.axis-label{
-font-size:16px;/* aumenta tamaño etiquetas eje*/
+.axis-label {
+  font-size: 16px;
 }
-.xlabel,.ylabel{font-size:18px;}/* aumenta tamaño titulos ejes*/
+
+.xlabel,
+.ylabel {
+  font-size: 18px;
+}
+#chart {
+  width: 80%; /* Cambia el ancho al porcentaje deseado */
+  margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
+}
