@@ -13,7 +13,7 @@ function updatePlot(year, data) {
   const trace = {
     x: filteredData.map(d => d.nombre),
     y: filteredData.map(d => d.mision_hs),
-    text: filteredData.map(d => `Nacionalidad: ${d.nacionalidad}<br>Ocupación: ${d.profesion}<br>Horas de misión: ${d.mision_hs}`),
+    text: filteredData.map(d => `Nacionalidad: ${d.nacionalidad}<br>Ocupación: ${d.ocupacion}<br>Horas de misión: ${d.mision_hs}`),
     type: 'bar',
     marker: {
       color: filteredData.map(d => colorScale(d.nacionalidad)),
