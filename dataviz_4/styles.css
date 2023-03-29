@@ -1,9 +1,7 @@
 
 #chart {
   display: inline-block;
-  border: 1px solid black;
-  padding: 10px; /* Agrega espacio entre el borde y el contenido */
-  background-color: #F5F5F5; /* Añade un color de fondo gris claro */
+  padding: 10px; /* Agrega espacio entre el borde y el contenido */  
   margin-left: 10%;
 }
 
@@ -14,11 +12,11 @@
 }
 
 h1{
-text-align:center;
+text-align:left;
+margin-left: 2%;
 font-family:'Arial';
 font-size:30px;
 color:#333;
-border-bottom:solid #000000 2px;
 padding-top:20px;/* agregue espaciado superior debajo del título */
 
 }

@@ -1,8 +1,7 @@
 #chart {
-  border: 1px solid black;
   padding: 10px;
-  background-color: #F5F5F5;
   margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
+  width: 70%; /* Cambia el ancho al porcentaje deseado */
 }
 
 .mark rect {
@@ -11,11 +10,11 @@
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
+  margin-left: 2%;
   font-family: 'Arial';
   font-size: 30px;
   color: #333;
-  border-bottom: solid #000000 2px;
   padding-top: 20px;
 }
 
@@ -26,10 +25,6 @@ h1 {
 .xlabel,
 .ylabel {
   font-size: 18px;
-}
-#chart {
-  width: 80%; /* Cambia el ancho al porcentaje deseado */
-  margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
 }
 
 footer {
