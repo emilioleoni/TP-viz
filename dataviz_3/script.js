@@ -1,48 +1,30 @@
-Plotly.d3.csv('astronautas.csv', function(err, data) {
-  if(err) throw err;
-  console.log(data);
-
-  let occupations = data.map(d => d.ocupacion);
-  let hours = data.map(d => d.eva_mision_hs);
-
-  let colorScale = d3.scaleOrdinal(d3.schemeCategory10)
-                    .domain(occupations);
-
-  let trace = {
-    x: hours,
-    y: occupations,
-    type: 'bar',
-    orientation: 'h',
-    marker: {
-      color: colorScale(occupations),
+d3.csv('astronautas.csv', d3.autoType).then(data => {
+  console.log(data)
+  // Guardamos el svg generado en la variable chart
+  let chart = Plot.plot({
+    marginLeft: 200,
+    marginRight: 50,
+    marginTop: 50,
+    marginBottom: 100,
+    width:"1000",
+    height:300,
+    nice:true,
+    grid:true,
+    line:true,
+    marks: [
+      Plot.barX(data, {
+        x: 'eva_mision_hs', fill: 'ocupacion',
+        y: 'ocupacion'
+      }),
+    ],
+    y: {
+      label: "Ocupación", 
+      domain: d3.sort(data, (a, b) => d3.descending(a.eva_mision_hs, b.eva_mision_hs)).map(d => d.ocupacion),
+    },
+    x: { label:"Horas de mision eva",
+      grid: true,
     }
-  };
-
-  let layout = {
-    title: {
-      text: 'Ocupaciones que estuvieron más tiempo en misiones EVA'
-    },
-    xaxis: {
-      title: {
-        text: 'Horas de misión EVA'
-      },
-      rangemode: 'tozero'
-    },
-    yaxis: {
-      title: {
-        text: 'Ocupación'
-      },
-      tickvals: occupations,
-      automargin: true,
-    },
-    margin: {
-      l: 150,
-      r: 50,
-      b: 100,
-      t: 100,
-      pad: 4
-    }
-  };
-
-  Plotly.newPlot('chart', [trace], layout);
-});
+  })
+  // Agregamos chart al div#chart de index.html
+  d3.select('#chart').append(() => chart)
+})
