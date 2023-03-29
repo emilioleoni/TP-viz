@@ -8,9 +8,10 @@
 
 h1 {
   font-size: 3rem;
-  text-align: center;
+  margin-left: 5%;
+  text-align: left;
   margin-top: 5vh;
-  color: #132154;
+  color: #black;
   /* Agrega estas propiedades */
  /* border-bottom: 3px solid #3F2B96;*/
   padding-bottom: 10px;
@@ -36,7 +37,7 @@ h1 {
   /* Resto de las propiedades */
   width: 80%;
   height: 60vh;
-  background: rgba(0, 121, 191, 0.8);
+  background: black;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   display: flex;
@@ -65,7 +66,7 @@ a{
 
 a:hover{
   background-color: #ffffff;
-  color: #0079bf;
+  color: black;
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
