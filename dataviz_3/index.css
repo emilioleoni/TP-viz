@@ -1,7 +1,7 @@
 #chart {
   padding: 10px;
   margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
-  width: 70%; /* Cambia el ancho al porcentaje deseado */
+  width: 75%; /* Cambia el ancho al porcentaje deseado */
 }
 
 .mark rect {
@@ -12,7 +12,7 @@
 h1 {
   text-align: left;
   margin-left: 2%;
-  font-family: 'Arial';
+  font-family: 'roboto condensed', sans-serif;
   font-size: 30px;
   color: #333;
   padding-top: 20px;
@@ -33,8 +33,9 @@ footer {
   left: 0;
   right: 0;
   height: 50px; /* Ajusta la altura del footer */
-  color: white;
-  background-color: gray;
+  color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   text-align: left;
+  font-family: 'futura-pt', sans-serif;
   padding: 20px;
 }
