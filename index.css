@@ -6,13 +6,16 @@
     font-family: 'poppins',sans-serif;
 }
 
-h1{
+h1 {
   font-size: 3rem;
   text-align: center;
-  margin-top: 5vh; /* Se ha ajustado la distancia desde arriba */
+  margin-top: 5vh;
   color: #132154;
-  text-shadow: 2px 2px rgba(0,0,0,0.5);
+  /* Agrega estas propiedades */
+  border-bottom: 3px solid #3F2B96;
+  padding-bottom: 10px;
 }
+
 
 .container{
   display: flex;
