@@ -4,8 +4,16 @@
   border: 1px solid black;
   padding: 10px; /* Agrega espacio entre el borde y el contenido */
   background-color: #F5F5F5; /* Añade un color de fondo gris claro */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
+p{
+  text-align: center;
+  font-size: 30px;
+}
 /* Estilo para las barras de grafico*/
 .mark rect {
  fill: #4682B4; /* Cambia el color relleno paara tener mas contraste con background-colors */
@@ -27,3 +35,15 @@ padding-top:20px;/* agregue espaciado superior debajo del título */
 font-size:16px;/* aumenta tamaño etiquetas eje*/
 }
 .xlabel,.ylabel{font-size:18px;}/* aumenta tamaño titulos ejes*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Ajusta la altura del footer */
+  color: white;
+  background-color: gray;
+  text-align: left;
+  padding: 20px;
+}

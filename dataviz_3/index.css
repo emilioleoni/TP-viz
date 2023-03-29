@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 #chart {
   border: 1px solid black;
   padding: 10px;
@@ -32,34 +31,3 @@ h1 {
   width: 80%; /* Cambia el ancho al porcentaje deseado */
   margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
 }
-=======
-h1 {
-  text-align: center;
-  font-family: 'Arial';
-  font-size: 30px;
-  color: #333;
-  border-bottom: 2px solid #000;
-  padding-top: 20px;
-}
-
-/* Estilos para el gráfico */
-#chart {
-  position: absolute;
-  border: 0.1px solid black;
-  padding: 0px;
-  background-color: #F5F5F5;
-  width: 100%;
-  left: 10%;
-}
-
-/* Estilos para los ejes */
-.axis-label {
-  font-size: 16px;
-}
-
-.xlabel, .ylabel {
-  font-size: 18px;
-}
-
-  
->>>>>>> Stashed changes

@@ -4,9 +4,9 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     let chart = Plot.plot({
       marks: [
         Plot.dot(data, {
-          y: 'nacionalidad',
-          x: 'mision_hs',
-          symbol: "circle",
+          y: 'anio_mision',
+          x: 'nacionalidad',
+          symbol: "square",
           r:3.5,
           fill: 'genero',
         }),
@@ -17,11 +17,11 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       color: {
         legend: true,
       },
-      x:{label:"mision_hs", labelOffset:38},
-      y: { label: "Nacionalidad", labelOffset: 150, },
-      height: 300,
+      x:{label:"Nacionalidad", labelOffset:38},
+      y:{label:"Año de la mision", labelOffset:100},
+    height: 300,
     width:1200,
-    marginLeft: 150,
+    marginLeft: 100,
     marginBottom:50,
     })
     // Agregamos chart al div#chart de index.html
