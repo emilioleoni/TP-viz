@@ -3,8 +3,6 @@
   padding: 10px;
   background-color: #F5F5F5;
   margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
-  width: 80%; /* Cambia el ancho al porcentaje deseado */
-  margin-bottom: 20px; /* Agrega un margen inferior para separar el gráfico del siguiente elemento */
 }
 
 .mark rect {
@@ -19,7 +17,6 @@ h1 {
   color: #333;
   border-bottom: solid #000000 2px;
   padding-top: 20px;
-  margin-top: 0; /* Agrega un margen superior cero para el título */
 }
 
 .axis-label {
@@ -30,6 +27,10 @@ h1 {
 .ylabel {
   font-size: 18px;
 }
+#chart {
+  width: 80%; /* Cambia el ancho al porcentaje deseado */
+  margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
+}
 
 footer {
   position: absolute;
@@ -39,6 +40,6 @@ footer {
   height: 50px; /* Ajusta la altura del footer */
   color: white;
   background-color: gray;
-  text-align: center; /* Centra el texto en el footer */
+  text-align: left;
   padding: 20px;
 }
