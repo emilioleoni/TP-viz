@@ -28,11 +28,17 @@ El código utiliza la biblioteca D3.js para crear un gráfico de puntos que mues
 
 # Visulización 3:
 - Marcas: rectángulos (en la clase .mark)
-- Canales: color de relleno (fill) y borde (stroke) para los rectángulos, tamaño del gráfico (width),     posición del gráfico (left), fuente de datos. 
-
-# Visualización 4
-- Canal X (horizontal): tiempo en misión (mision_hs).
-- Canal Y (vertical): astronautas (nombre).
-- Canal de color: indica la cantidad total de horas que cada astronauta ha pasado en misiones espaciales mediante una escala secuencial interpolada con tonos azules más oscuros cuanto mayor sea el valor numérico correspondiente al tiempo total de misión del astronauta.
+- Canal X: horas de misión EVA (eva_mision_hs)
+- Canal Y: ocupación del piloto (ocupacion)
+- Canal tipográfico: se utiliza para mostrar las etiquetas del eje Y y proporcionar información adicional sobre el gráfico mediante un título principal, subtítulo y fuente de datos.
+# Visualización 4:
+- Canal X: tiempo en misión (mision_hs).
+- Canal Y: astronautas (nombre).
+- Canal de color: indica la cantidad total de horas que cada astronauta pasó en misiones espaciales con tonos de azul más oscuros cuán mayor sea el tiempo total de misión del astronauta.
 - Canal tipográfico: se utiliza para mostrar las etiquetas del eje Y y proporcionar información adicional sobre el gráfico mediante un título principal, subtítulo y fuente de datos.
 
+# Visualización 5:
+- Canal X: astronautas (nombre).
+- Canal Y: horas de misión (mision_hs).
+- Canal de color: indica la nacionalidad del astronauta 
+- Canal tipográfico: se utiliza para mostrar las etiquetas del eje Y y proporcionar información adicional sobre el gráfico mediante un título principal, subtítulo y fuente de datos.
