@@ -37,7 +37,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     title: 'Misiones espaciales',
     xaxis: {title: 'Año de la misión'},
     yaxis: {title: 'Duración de la misión (horas)'},
-    hovermode: 'closest'
+    hovermode: 'closest',
   };
 
   // Crear y agregar el gráfico al DOM
