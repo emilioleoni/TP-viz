@@ -31,3 +31,15 @@ h1 {
   width: 80%; /* Cambia el ancho al porcentaje deseado */
   margin: 0 auto; /* Agrega margen automático para centrar horizontalmente */
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Ajusta la altura del footer */
+  color: white;
+  background-color: gray;
+  text-align: left;
+  padding: 20px;
+}
