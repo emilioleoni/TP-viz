@@ -6,7 +6,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   const filteredData = Array.from(groupedData, ([nombre, mision_hs]) => ({ nombre, mision_hs }));
 
   // Eligo los 25 con mas tiempo de mision total
-  const sortedData = filteredData.sort((a, b) => b.mision_hs - a.mision_hs).slice(0, 25);
+  const sortedData = filteredData.sort((a, b) => d3.descending( b.mision_hs-a.mision_hs)).slice(0, 25);
 
   // Elijo el color y como lo sorteo
   const colorScale = d3.scaleSequential()
@@ -34,7 +34,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     marginTop: 50,
     marginBottom: 100,
     width:"1100",
-    height:500,
+    height:600,
     nice:true,
     grid:true,
     line:true,
