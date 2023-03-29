@@ -27,3 +27,15 @@ padding-top:20px;/* agregue espaciado superior debajo del título */
   font-size: 18px; /* Change the font size to 18 pixels */
 }
 .xlabel,.ylabel{font-size:18px;}/* aumenta tamaño titulos ejes*/
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Ajusta la altura del footer */
+  color: white;
+  background-color: gray;
+  text-align: left;
+  padding: 20px;
+}
