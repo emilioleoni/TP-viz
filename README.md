@@ -57,4 +57,4 @@ Aclaracion: Usamos tags en donde pusimos los datos que lleva cada astronauta de 
 - Canal Y: horas de misión (mision_hs).
 - Canal de color: indica la nacionalidad del astronauta 
 - Canal Slider: indica el año de la misión y permite al usuario desplazarse por los años de las misiones espaciales
-    Justificacion: Para poder representar correctamente los datos de las misiones espaciales segun los distintos años elegimos representarlo con un grafico de barra con slider para moder variar el grafico segun el año. Decidimos usar colores para poder diferenciar por nacion para poder diferenciar la nacionaliad de cada astronauta ubicado en el eje x. 
+    Justificacion: Para poder representar correctamente los datos de las misiones espaciales de astronautas de distintos paises segun los distintos años elegimos representarlo con un grafico de barra con slider para moder variar el grafico segun el año. Decidimos usar colores para poder diferenciar por nacion para poder diferenciar la nacionaliad de cada astronauta ubicado en el eje x. 

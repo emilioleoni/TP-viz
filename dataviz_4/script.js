@@ -5,9 +5,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
   // Lo convierto en una lista
   const filteredData = Array.from(groupedData, ([nombre, mision_hs]) => ({ nombre, mision_hs }));
 
-  // Eligo los 25 con mas tiempo de mision total
-  const sortedData = filteredData.sort((a, b) => d3.descending( b.mision_hs-a.mision_hs)).slice(0, 25);
-
+  // Eligo los 25 con mas tiempo de mision total de forma ascendente
+  const sortedData = filteredData.sort((a, b) => d3.descending(a.mision_hs, b.mision_hs)).slice(0, 25);
   // Elijo el color y como lo sorteo
   const colorScale = d3.scaleSequential()
     .domain(d3.extent(sortedData, d => d.mision_hs))
@@ -18,12 +17,12 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       label: "Astronautas",
       type: "band",
       tickFormat: d => d.toLocaleString("en", {month: "narrow"}),
+      domain: d3.sort(sortedData, d => -d.mision_hs).map(d => d.nombre),
     },
     marks: [
       Plot.barX(sortedData, {
         y: "nombre",
         x: "mision_hs",
-        sort:{y:"x"},
         fill: d => colorScale(d.mision_hs) // Use color scale to determine bar color
       }),
       Plot.ruleX([0])
@@ -42,4 +41,3 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
   d3.select('#chart').append(() => chart)
 });
-
