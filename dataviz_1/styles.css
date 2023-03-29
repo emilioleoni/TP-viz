@@ -19,17 +19,13 @@ p{
  fill: #4682B4; /* Cambia el color relleno paara tener mas contraste con background-colors */
  stroke:#fff; /*Agrega una linea blaca alrededor del elemento*/
 }
-
 h1{
-text-align:left;
-font-family:'roboto condensed', sans-serif;
-margin-left: 2%;
-font-size:30px;
-color:#333;
-padding-top:20px;/* agregue espaciado superior debajo del título */
-
+  text-align: left;
+  margin-left: 2%;
+  font-family: sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
 }
-
 
 .axis-label{
 font-size:16px;/* aumenta tamaño etiquetas eje*/

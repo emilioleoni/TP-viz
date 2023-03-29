@@ -8,15 +8,11 @@
   fill: #4682B4;
   stroke: #fff;
 }
-
-h1 {
-  text-align: left;
+h1{
   margin-left: 2%;
   font-family: 'roboto condensed', sans-serif;
-  font-size: 30px;
-  color: #333;
-  padding-top: 20px;
 }
+
 
 .axis-label {
   font-size: 16px;
