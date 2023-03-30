@@ -25,7 +25,7 @@ Marcas y canales utilizados:
     observar de forma vertical. Los colores los elegimos para poder ayudar a la visualizacion de naciones.
 
 # Visualización 2:
-Aclaracion: Usamos tags en donde pusimos los datos que lleva cada astronauta de forma explicita. Por ejemplo pusimos su nacionalidad escrita, el año en que hizo la mision y tambien la duracion de la mision. 
+Aclaracion: Usamos tags en donde mostramos los datos que lleva cada astronauta de forma precisa. Por ejemplo pusimos su nacionalidad escrita, el año en que hizo la mision y tambien la duracion de la mision. 
 - Marca: Scatter plot (gráfico de dispersión).
 - Canal X: Año de la misión.
 - Canal Y: Duración de la misión (horas).
@@ -51,7 +51,7 @@ Aclaracion: Usamos tags en donde pusimos los datos que lleva cada astronauta de 
 
 
 # Visualización 5:
-Aclaracion: Usamos tags en donde pusimos los datos que lleva cada astronauta de forma explicita. Por ejemplo pusimos su nacionalidad escrita, su ocupacion y tambien la duracion de la mision.
+Aclaracion: Usamos tags en donde mostramos los datos que lleva cada astronauta de forma precisa. Por ejemplo pusimos su nacionalidad escrita, su ocupación y tambien la duracion de la mision.
 -Marcas: Rectángulos (en la clase .mark)
 - Canal X: astronautas (nombre).
 - Canal Y: horas de misión (mision_hs).
