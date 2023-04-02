@@ -17,16 +17,6 @@ h1{
   font-family: 'roboto condensed', sans-serif;
 }
 
-
-.axis-label {
-  font-size: 16px;
-}
-
-.xlabel,
-.ylabel {
-  font-size: 18px;
-}
-
 footer {
   position: absolute;
   bottom: 0;

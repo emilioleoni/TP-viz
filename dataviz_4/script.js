@@ -22,13 +22,13 @@ function updatePlot(year, data) {
   };
 
   const layout = {
-    title: `Misiones Espaciales en ${year}`,
+    title: `${year}`,
     xaxis: { 
       title: { text: 'Astronautas', standoff: 10 },
       automargin: true
 
     },
-    yaxis: { title: 'Horas de misión' },
+    yaxis: { title: 'Horas de misión (horas)' },
     width: 1200,
   };
 
