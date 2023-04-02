@@ -17,30 +17,24 @@ Los campos son:
 
 Marcas y canales utilizados:
 # Visualización 1:
-- Marca: Scatter plot (gráfico de dispersión).
-- Canal X: Nacionalidad.
-- Canal Y: Año de la mision.
-- Canal color: Nacionaldidad (Aplicamos este canal para que ayude al usuario con la visualización)
-    Justificacion: Decidimos usar un Scatter plot para representar los distintos años que hubieron misiones espaciales, porque es una forma facil de poder entender en que año se hizo una mision y que año no.  Tambien facilita ver explicitamente los años que un nacion hizo una mision espacial ya que se puede, 
-    observar de forma vertical. Los colores los elegimos para poder ayudar a la visualizacion de naciones.
-
-# Visualización 2:
 Aclaracion: Usamos tags en donde mostramos los datos que lleva cada astronauta de forma precisa. Por ejemplo pusimos su nacionalidad escrita, el año en que hizo la mision y tambien la duracion de la mision. 
 - Marca: Scatter plot (gráfico de dispersión).
 - Canal X: Año de la misión.
 - Canal Y: Duración de la misión (horas).
 - Canal color: Nacionalidad del astronauta.
+- Canal Etiqueta:  la etiqueta se utiliza para codificar la información sobre todos los datos de cada astronauta y su mision, lo que permite al usuario comprender mejor los datos que se están presentando.
     Justificacion: Para la segunda visualización queriamos observar como al pasar de los años varia la duración de las misiones dependiendo de las naciones como tambien en general. Por esa razon tambien pensamos que un Scatter plot era la mejor forma para poder representar las variables. Decidimos usar colores para poder diferenciar por nación y de esa forma tener la posiblidad de comparar por nacion.
 
-# Visulización 3:
+# Visulización 2:
 - Marcas: Rectángulos (en la clase .mark).
 - Canal X: Horas de misión EVA (eva_mision_hs).
 - Canal Y: Ocupación del piloto (ocupacion).
-- Canal color: Ocupacion del piloto (ocupación).
+- Canal Color: Ocupacion del piloto (ocupación).
 - Canal Posición: Las barras estan posicionadas en base a su tiempo en mision de forma ascendente hacia arriba (eje y). Por lo tanto usamos la posicion para ayudar a la representacion cuantitativa del tiempo de mision EVA de los astronautas.
+- Canal Etiqueta:  la etiqueta se utiliza para codificar la información sobre la cantidad de horas de misión EVA asociadas con cada ocupación, lo que permite al usuario comprender mejor los datos que se están presentando.
     Justificacion: En el caso de la tercer visualización decidimos sumar todas las horas de mision eva dependiendo de que Ocupación tenia el astronauta. Por esta razon decidimos usar un grafico de barra horizontal, para comparar estas distintas agrupaciones. Aqui tambien decidimos usar un Canal color para ayudar con la diferenciacion de ocupaciones. Usamos la posicion de los graficos de barra para tambien ayudar con la visualizacion de las horas de mision EVA de cada ocupacion.
 
-# Visualización 4:
+# Visualización 3:
 - Marca: Rectángulos (en la clase .mark)
 - Canal X: tiempo en misión (mision_hs).
 - Canal Y: astronautas (nombre).
@@ -50,11 +44,12 @@ Aclaracion: Usamos tags en donde mostramos los datos que lleva cada astronauta d
     Justificacion: Decidimos usar un grafico de barras para poder representar de forma explicita el tiempo de mision de cada astronauta. Tambien decidimos usar los colores, la saturacion de colores y el posicionamiento de las barras de forma ascendente para poder ayudar a la visualizacion de los tiempos de mision de cada astronauta. 
 
 
-# Visualización 5:
+# Visualización 4:
 Aclaracion: Usamos tags en donde mostramos los datos que lleva cada astronauta de forma precisa. Por ejemplo pusimos su nacionalidad escrita, su ocupación y tambien la duracion de la mision.
 -Marcas: Rectángulos (en la clase .mark)
 - Canal X: astronautas (nombre).
 - Canal Y: horas de misión (mision_hs).
 - Canal de color: indica la nacionalidad del astronauta.
 - Canal Slider: indica el año de la misión y permite al usuario desplazarse por los años de las misiones espaciales.
+- Canal Etiqueta:  la etiqueta se utiliza para mostrar precisamente datos del astronauta como sus horas de la mision, lo que permite al usuario comprender mejor los datos que se están presentando.
     Justificacion: Para poder representar correctamente los datos de las misiones espaciales de astronautas de distintos paises segun los distintos años elegimos representarlo con un grafico de barra con slider para moder variar el grafico segun el año. Decidimos usar colores para poder diferenciar por nacion para poder diferenciar la nacionaliad de cada astronauta ubicado en el eje x. 

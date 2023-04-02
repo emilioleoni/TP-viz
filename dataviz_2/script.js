@@ -1,45 +1,40 @@
 d3.csv('astronautas.csv', d3.autoType).then(data => {
-  // Objeto de colores para cada país
-  const colorScale = d3.scaleOrdinal()
-    .domain(Array.from(new Set(data.map(d => d.nacionalidad))))
-    .range(d3.schemeTableau10); // Usa el esquema de colores Tableau 10
+  const groupedData = d3.rollup(data, group => d3.sum(group, d => d.eva_mision_hs), d => d.ocupacion);
 
-  // Configuración del gráfico
-  const trace = {
-    x: data.map(d => d.anio_mision),
-    y: data.map(d => d.mision_hs),
-    text: data.map(d => `Año de la misión: ${d.anio_mision}<br>Duración de la misión: ${d.mision_hs}<br>Nacionalidad: ${d.nacionalidad}`),
-    mode: 'markers',
-    type: 'scatter',
-    marker: {
-      color: data.map(d => colorScale(d.nacionalidad)), // Asigna colores según el país
-      size: 12, // Aumenta el tamaño de los puntos
+  // Lo convierto en una lista
+  const filteredData = Array.from(groupedData, ([ocupacion, eva_mision_hs]) => ({ ocupacion, eva_mision_hs }));
+
+  // Eligo los 25 con mas tiempo de mision total de forma ascendente
+  console.log(data)
+  // Guardamos el svg generado en la variable chart
+  let chart = Plot.plot({
+    marginLeft: 200,
+    marginRight: 50,
+    marginTop: 50,
+    marginBottom: 100,
+    width:"1000",
+    height:400,
+    nice:true,
+    grid:true,
+    line:true,
+    marks: [
+      Plot.barX(filteredData, {
+        x: 'eva_mision_hs',
+        fill: 'ocupacion',
+        y: 'ocupacion',
+        title: d => `${d.eva_mision_hs} horas`
+      }),
+    ],
+    y: {
+      label: "Ocupación", 
+      domain: d3.sort(filteredData, (a, b) => d3.descending(a.eva_mision_hs, b.eva_mision_hs)).map(d => d.ocupacion),
     },
-    // Agrega la leyenda de colores
-    showlegend: true,
-    legend: {
-      traceorder: 'reversed',
-    },
-    transforms: [{
-      type: 'groupby',
-      groups: data.map(d => d.nacionalidad),
-      styles: Array.from(new Set(data.map(d => d.nacionalidad))).map(country => ({
-        target: country,
-        value: {
-          marker: {color: colorScale(country)},
-          name: country,
-        },
-      })),
-    }],
-  };
+    x: {
+      label:"Horas de mision eva",
+      grid: true,
+    }
+  })
 
-  const layout = {
-    title: 'Misiones espaciales',
-    xaxis: {title: 'Año de la misión'},
-    yaxis: {title: 'Duración de la misión (horas)'},
-    hovermode: 'closest',
-  };
-
-  // Crear y agregar el gráfico al DOM
-  Plotly.newPlot('chart', [trace], layout);
-});
+  // Agregamos chart al div#chart de index.html
+  d3.select('#chart').append(() => chart)
+})  

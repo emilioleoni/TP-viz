@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdn.plot.ly/plotly-2.10.0.min.js"></script>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- <head> -->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="https://d3js.org/d3-scale-chromatic.v2.min.js"></script>
 
-    <link rel="stylesheet" href="styles.css">
+    <!-- </head> -->
+    
+    <h1> Trabajando duro en el vacío: La relación entre horas de EVA y ocupación </h1>
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <h1>Explorando el espacio: ¿Cuánto duran nuestras misiones?</h1>
+    <title>Astronautas 03 - X</title>
     <style>
       #chart{
         overflow-y:auto;
@@ -19,19 +23,16 @@
     </style>
   </head>
   <body>
-    
-
-    <div id="chart"></div>
-
+      <div class="background-image"></div> <!--DIV añadido aqui-->
+      <div id="chart"></div>
+      </body>
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
     <script src="script.js"></script>
-    <!-- <button onclick="window.location.href='../index.html'">Volver</button> -->
   </body>
-<footer>    <p1>Fuente de datos: <a href = "https://github.com/visualizacion-de-datos-utdt/vd_astronautas/blob/main/astronautas.csv">Pulse aqui para acceder a los datos</a> 
+  <footer> <p1>Fuente de datos: <a href = "https://github.com/visualizacion-de-datos-utdt/vd_astronautas/blob/main/astronautas.csv">Pulse aqui para acceder a los datos</a> 
     <br>
     Emilio Leoni, Tomas Morita y Ezequiel Kaplan
-</p1></footer>
+  </p1></footer>
 </html>
-
