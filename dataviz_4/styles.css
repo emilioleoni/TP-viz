@@ -1,4 +1,28 @@
 
+#chart {
+  display: inline-block;
+  padding: 10px; /* Agrega espacio entre el borde y el contenido */  
+  margin-left: 10%;
+}
+
+/* Estilo para las barras de grafico*/
+.mark rect {
+ fill: #4682B4; /* Cambia el color relleno paara tener mas contraste con background-colors */
+ stroke:#fff; /*Agrega una linea blaca alrededor del elemento*/
+}
+
+h1{
+  margin-left: 2%;
+  font-family: 'roboto condensed', sans-serif;
+}
+
+
+
+.axis-label {
+  font-size: 18px; /* Change the font size to 18 pixels */
+}
+.xlabel,.ylabel{font-size:18px;}/* aumenta tamaño titulos ejes*/
+
 footer {
   position: absolute;
   bottom: 0;
