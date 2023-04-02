@@ -3,12 +3,8 @@ function createSliderYears(data) {
   return years;
 }
 
-function updatePlot(year, data) {
+function updatePlot(year, data, colorScale) {
   const filteredData = data.filter(d => d.anio_mision === year);
-
-  const colorScale = d3.scaleOrdinal()
-    .domain(Array.from(new Set(filteredData.map(d => d.nacionalidad))))
-    .range(d3.schemeTableau10);
 
   const trace = {
     x: filteredData.map(d => d.nombre),
@@ -31,10 +27,33 @@ function updatePlot(year, data) {
   };
 
   Plotly.newPlot('chart', [trace], layout);
+
+  const legendData = Array.from(new Set(filteredData.map(d => d.nacionalidad)));
+  const legend = d3.select('#legend')
+    .selectAll('.legend-item')
+    .data(legendData);
+
+  const newLegendItems = legend.enter()
+    .append('div')
+    .attr('class', 'legend-item');
+
+  newLegendItems.append('div')
+    .attr('class', 'legend-color')
+    .style('background-color', d => colorScale(d));
+
+  newLegendItems.append('div')
+    .attr('class', 'legend-label')
+    .text(d => d);
+
+  legend.exit().remove();
 }
 
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   const years = createSliderYears(data);
+  const colorScale = d3.scaleOrdinal()
+    .domain(Array.from(new Set(data.map(d => d.nacionalidad))))
+    .range(d3.schemeTableau10);
+
   const slider = d3.select('body')
     .append('input')
     .attr('type', 'range')
@@ -47,13 +66,15 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     .append('p')
     .text(`Año seleccionado: ${years[0]}`);
 
+  const legend = d3.select('body')
+    // .append('div')
+    // .attr('id', 'legend');
+
   slider.on('input', function () {
     const selectedYear = +this.value;
     displayYear.text(`Año seleccionado: ${selectedYear}`);
-    updatePlot(selectedYear, data);
+    updatePlot(selectedYear, data, colorScale);
   });
-  
 
-  updatePlot(years[0], data);
-  
+  updatePlot(years[0], data, colorScale);  
 });

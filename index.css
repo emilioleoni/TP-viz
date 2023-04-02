@@ -29,15 +29,16 @@ h1 {
 
 
 .form-box {
-  /* Agrega estas propiedades */
+  /* Propiedades anteriores */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+  backdrop-filter: blur(5px); /* Difuminar el fondo de atrás */
+  /* Resto de las propiedades */
   position: absolute;
   top: 50%;
   left: 47%;
   transform: translate(-50%, -50%);
-  /* Resto de las propiedades */
   width: 80%;
   height: 60vh;
-  background: black;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
   display: flex;
@@ -46,9 +47,8 @@ h1 {
   margin: 5vh;
   padding: 5vw;
   flex-direction: column;
-  /* Ajusta estas propiedades */
-  /* left: calc(50% - 40vw); */
 }
+
 
 
 a{
@@ -67,7 +67,7 @@ a{
 a:hover{
   background-color: #ffffff;
   color: black;
-  transform: scale(1.1);
+  transform: scale(1.02);
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .form-value a {
