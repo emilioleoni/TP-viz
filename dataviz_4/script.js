@@ -28,7 +28,7 @@ function updatePlot(year, data) {
       automargin: true
 
     },
-    yaxis: { title: 'Horas de misión (horas)' },
+    yaxis: { title: 'Horas de misión' },
     width: 1200,
   };
 
