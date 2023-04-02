@@ -26,8 +26,10 @@ function updatePlot(year, data) {
     xaxis: { 
       title: { text: 'Astronautas', standoff: 10 },
       automargin: true
+
     },
-    yaxis: { title: 'Horas de misión' }
+    yaxis: { title: 'Horas de misión' },
+    width: 1200,
   };
 
   Plotly.newPlot('chart', [trace], layout);
