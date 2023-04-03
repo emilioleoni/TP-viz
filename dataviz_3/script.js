@@ -27,7 +27,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         domain: d3.sort(sortedData, d => -d.mision_hs).map(d => d.nombre),
       },
       x: {
-        label: "Tiempo en misiones (horas)",
+        label: "Tiempo en misiones (hs)",
       },
       marks: [
         Plot.barX(sortedData, {
