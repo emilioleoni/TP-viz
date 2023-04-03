@@ -22,7 +22,6 @@ function updatePlot(year, data) {
   };
 
   const layout = {
-    title: `${year}`,
     xaxis: { 
       title: { text: 'Astronautas', standoff: 10 },
       automargin: true
@@ -37,7 +36,7 @@ function updatePlot(year, data) {
 
 d3.csv('astronautas.csv', d3.autoType).then(data => {
   const years = createSliderYears(data);
-  const slider = d3.select('body')
+  const slider = d3.select('#slider-container')
     .append('input')
     .attr('type', 'range')
     .attr('min', years[0])
@@ -45,7 +44,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     .attr('step', 1)
     .attr('value', years[0]);
 
-  const displayYear = d3.select('body')
+  const displayYear = d3.select("#slider-container")
     .append('p')
     .text(`Año seleccionado: ${years[0]}`);
 
