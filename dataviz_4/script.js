@@ -2,12 +2,12 @@ function createSliderYears(data) {
   const years = [...new Set(data.map(d => d.anio_mision))].sort((a, b) => a - b);
   return years;
 }
-
 function updatePlot(year, data) {
   const filteredData = data.filter(d => d.anio_mision === year);
 
+  // Mueve la escala de colores fuera de filteredData para mantener los colores fijos
   const colorScale = d3.scaleOrdinal()
-    .domain(Array.from(new Set(filteredData.map(d => d.nacionalidad))))
+    .domain(Array.from(new Set(data.map(d => d.nacionalidad))))
     .range(d3.schemeTableau10);
 
   const trace = {
@@ -17,17 +17,16 @@ function updatePlot(year, data) {
     type: 'bar',
     marker: {
       color: filteredData.map(d => colorScale(d.nacionalidad)),
-    } //Le dejamos color?
-  
+    }
   };
 
   const layout = {
+    title: `${year}`,
     xaxis: { 
       title: { text: 'Astronautas', standoff: 10 },
       automargin: true
-
     },
-    yaxis: { title: 'Horas de misión (hs)' },
+    yaxis: { title: 'Horas de misión' },
     width: 1200,
   };
 
