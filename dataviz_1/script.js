@@ -35,7 +35,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
 
   const layout = {
     xaxis: {title: 'Año de la misión'},
-    yaxis: {title: 'Duración de la misión (horas)'},
+    yaxis: {title: 'Duración de la misión (hs)'},
     hovermode: 'closest',
   };
 
