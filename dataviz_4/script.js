@@ -21,7 +21,6 @@ function updatePlot(year, data) {
   };
 
   const layout = {
-    title: `${year}`,
     xaxis: { 
       title: { text: 'Astronautas', standoff: 10 },
       automargin: true
