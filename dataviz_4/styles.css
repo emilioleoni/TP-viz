@@ -2,8 +2,14 @@
 #chart {
   display: inline-block;
   padding: 10px; /* Agrega espacio entre el borde y el contenido */  
-  margin-left: 10%;
+  margin-left: 2%;
 }
+
+
+#slider-container {
+  margin-left: 5%; /* Ajusta este valor para mover el slider a la derecha */
+}
+
 
 /* Estilo para las barras de grafico*/
 .mark rect {
@@ -36,7 +42,3 @@ footer {
   padding: 20px;
 }
 
-h1{
-  margin-left: 2%;
-  font-family: 'roboto condensed', sans-serif;
-}
