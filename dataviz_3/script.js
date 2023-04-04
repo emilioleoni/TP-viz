@@ -57,5 +57,5 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       .attr('x', 600)
       .attr('y', 640)
       .attr('text-anchor', 'middle')
-      .text(`Tiempo promedio de mision de los 25 astronautas: ${averageTime.toFixed(2)} hs`);
+      .text(`Tiempo promedio de mision de los 25 astronautas con mayor tiempo: ${averageTime.toFixed(2)} hs`);
   });
