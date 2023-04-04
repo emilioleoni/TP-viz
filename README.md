@@ -41,7 +41,8 @@ Aclaracion: Usamos tags en donde mostramos los datos que lleva cada astronauta d
 - Canal de color: indica la cantidad total de horas que cada astronauta pasó en misiones espaciales con tonos de azul más oscuros cuán mayor sea el tiempo total de misión del astronauta.
 - Canal Saturación: Se utiliza como una representación cuantitativa para el tiempo en mision de los astronautas.
 - Canal Posición: Las barras estan posicionadas en base a su tiempo en mision de forma ascendente  hacia arriba (eje y). Por lo tanto usamos la posicion para ayudar a la representacion cuantitativa del tiempo de mision de los astronautas.
-    Justificacion: Decidimos usar un grafico de barras para poder representar de forma explicita el tiempo de mision de cada astronauta. Tambien decidimos usar los colores, la saturacion de colores y el posicionamiento de las barras de forma ascendente para poder ayudar a la visualizacion de los tiempos de mision de cada astronauta. 
+- Canal Etiqueta:  la etiqueta se utiliza para codificar la información sobre la cantidad de horas de misión  asociadas con cada astronauta, permite ver un dato mas especifico de las horas de mision de cada astronauta.
+    Justificacion: Decidimos usar un grafico de barras para poder representar de forma explicita el tiempo de mision de cada astronauta. Tambien decidimos usar los colores, la saturación de colores y el posicionamiento de las barras de forma ascendente para poder ayudar a la visualizacion de los tiempos de mision de cada astronauta. 
 
 
 # Visualización 4:

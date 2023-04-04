@@ -33,7 +33,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         Plot.barX(sortedData, {
           y: "nombre",
           x: "mision_hs",
-          fill: d => colorScale(d.mision_hs)
+          fill: d => colorScale(d.mision_hs),
+          title: d => `${d.mision_hs} horas`
         }),
         Plot.ruleX([0]),
       ],
