@@ -12,7 +12,8 @@ function updatePlot(year, data) {
 
   const trace = {
     x: filteredData.map(d => d.nombre),
-    y: filteredData.map(d => d.mision_hs),
+    y: filteredData.map(d => d.mision_hs/1000),
+    hovertemplate: '%{text}<extra></extra>',
     text: filteredData.map(d => `Nacionalidad: ${d.nacionalidad}<br>Ocupación: ${d.ocupacion}<br>Horas de misión: ${d.mision_hs}`),
     type: 'bar',
     marker: {
@@ -25,7 +26,7 @@ function updatePlot(year, data) {
       title: { text: 'Astronautas', standoff: 10 },
       automargin: true
     },
-    yaxis: { title: 'Horas de misión' },
+    yaxis: { title: 'Miles de horas de misión' },
     width: 1200,
   };
 
