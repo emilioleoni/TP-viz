@@ -16,7 +16,7 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
     height:400,
     nice:true,
     grid:true,
-    line:true,
+    line:true,  
     marks: [
       Plot.barX(filteredData, {
         x: 'eva_mision_hs',

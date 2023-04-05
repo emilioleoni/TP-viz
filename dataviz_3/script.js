@@ -33,7 +33,8 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
         Plot.barX(sortedData, {
           y: "nombre",
           x: "mision_hs",
-          fill: d => colorScale(d.mision_hs)
+          fill: d => colorScale(d.mision_hs),
+          title: d => `${d.mision_hs} horas`
         }),
         Plot.ruleX([0]),
       ],
@@ -56,5 +57,5 @@ d3.csv('astronautas.csv', d3.autoType).then(data => {
       .attr('x', 600)
       .attr('y', 640)
       .attr('text-anchor', 'middle')
-      .text(`Tiempo promedio de mision de los 25 astronautas: ${averageTime.toFixed(2)} hs`);
+      .text(`Tiempo promedio de mision de los 25 astronautas con mayor tiempo: ${averageTime.toFixed(2)} hs`);
   });
